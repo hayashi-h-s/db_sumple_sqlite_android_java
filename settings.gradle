@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "nc_db_sumple_sqlite"

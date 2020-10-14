@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    entries
+    string.xmlから一覧を表示できる
+    -->
+
+    <ListView
+        android:id="@+id/lvCocktail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0.6"
+        android:entries="@array/lv_cocktailList"
+        tools:ignore="Suspicious0dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_lb_name"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvCocktailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_name"
+        android:textSize="20sp" />
+
+    <!--    emsはTextViewの幅を定義 -->
+    <!--    https://monoworks.co.jp/post/android_develop_memo_2015112001/-->
+
+    <!--    textPersonName = 人名を入力する -->
+    <!--    textMultiLine = 複数行-->
+    <!--    https://qiita.com/joji/items/41cc6cbedb7b84b632df-->
+
+    <TextView
+        android:id="@+id/tv_lib_note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_lb_note"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/etNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:gravity="top|left"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:onClick="onSaveButtonClick"
+        android:text="@string/btn_save" />
+
+</LinearLayout>
